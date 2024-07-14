@@ -1,0 +1,26 @@
+{ "spaceFlix": [
+    {
+        "id": 1,
+        "title": "SpaceX",
+        "capa": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/SpaceX_logo.svg/1200px-SpaceX_logo.svg.png",
+        "video": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/SpaceX_logo.svg/1200px-SpaceX_logo.svg.png",
+        "category": "July 20, 2002",
+        "description": "July 20, 2002"
+    },
+    {
+        "id": 2,
+        "title": "SpaceX",
+        "capa": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/SpaceX_logo.svg/1200px-SpaceX_logo.svg.png",
+        "video": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/SpaceX_logo.svg/1200px-SpaceX_logo.svg.png",
+        "category": "July 20, 2002",
+        "description": "July 20, 2002"
+    },
+    {
+        "id": 3,
+        "title": "SpaceX",
+        "capa": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/SpaceX_logo.svg/1200px-SpaceX_logo.svg.png",
+        "video": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/SpaceX_logo.svg/1200px-SpaceX_logo.svg.png",
+        "category": "July 20, 2002",
+        "description": "July 20, 2002"
+    }
+]}
