@@ -55,7 +55,7 @@ export default function CardVideo({ capa, idVideo, title, category, description 
         <SplideSlide>
             <ItemCarrousel className="info_item">
                 <img
-                    src={capa}
+                    src={`https://image.tmdb.org/t/p/w500${capa}`}
                     style={{
                         width: '100%',
                         height: '100%',

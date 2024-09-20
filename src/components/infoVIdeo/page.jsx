@@ -25,7 +25,7 @@ const style = {
     left: '50%',
     transform: 'translate(-50%, -50%)',
     width: '100%',
-    maxWidth: '600px',
+    maxWidth: '450px',
     bgcolor: '#20282e',
     border: '2px solid #000',
     overflow: 'hidden',
@@ -38,18 +38,18 @@ const BoxIconsItem = styled(Box)(() => ({
     flexDirection: 'column',
     justifyContent: 'flex-end',
     alignItems: 'center',
-    height: '150px',
+    height: '800px',
     padding: '0 0 .5em 0',
     background: '#ffffff',
-    background: '-moz-linear-gradient(180deg, #ffffff00 0%, #20282ecc 77%)',
-    background: '-webkit-linear-gradient(180deg, #ffffff00 0%, #20282ecc 77%)',
-    background: 'linear-gradient(180deg, #ffffff00 0%, #20282ecc 77%)',
+    background: '-moz-linear-gradient(180deg, #ffffff00 0%, #20282e 77%)',
+    background: '-webkit-linear-gradient(180deg, #ffffff00 0%, #20282e 77%)',
+    background: 'linear-gradient(180deg, #ffffff00 0%, #20282ee6 77%)',
     filter: 'progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff00", endColorstr="#20282ecc", GradientType=1)',
     cursor: 'pointer'
 }));
 
-const InfoVideo = ({ open,  infoVideo, capa, category, description, title }) => {
-   
+const InfoVideo = ({ open, infoVideo, capa, category, description, title }) => {
+
     const handleClose = () => {
         infoVideo(false);
     };
@@ -60,16 +60,19 @@ const InfoVideo = ({ open,  infoVideo, capa, category, description, title }) => 
             onClose={handleClose}
             aria-labelledby="modal-modal-title"
             aria-describedby="modal-modal-description"
-            sx={{ zIndex: '1000', backgroundColor:'#14243120' }}
+            sx={{ zIndex: '1000', backgroundColor: '#14243120' }}
         >
             <Box sx={style}>
                 <Box sx={{ position: 'relative' }}>
                     <IconButton onClick={handleClose} sx={{ position: 'absolute', right: '.3em', top: '.3em', zIndex: 200000000000 }}>
                         <CloseIcon />
                     </IconButton>
-                    <Box position='relative'>
+                    <Box position='relative' sx={{
+                        maxWidth: '450px',
+                        maxHeight: '100%',
+                    }}>
                         <img
-                            src={capa}
+                            src={`https://image.tmdb.org/t/p/w500${capa}`}
                             alt='imagen'
                             style={{
                                 width: '100%',
@@ -90,15 +93,15 @@ const InfoVideo = ({ open,  infoVideo, capa, category, description, title }) => 
                                     <FavoriteBorderOutlinedIcon fontSize='large' color="white" />
                                 </IconButton>
                             </Box>
+                            <Box p='1em 2em 0'>
+                                <Typography variant='h6' color='#ededed'>Categoría:</Typography>
+                                <Typography variant='body1' color='#ededed'>{category}</Typography>
+                            </Box>
+                            <Box p='1em 2em 2em'>
+                                <Typography variant='h6' color='#ededed'>Descripcion:</Typography>
+                                <Typography variant='body1' color='#ededed'>{description}</Typography>
+                            </Box>
                         </BoxIconsItem>
-                    </Box>
-                    <Box p='1em 2em 0'>
-                        <Typography variant='h6' color='#ededed'>Categoría:</Typography>
-                        <Typography variant='body1' color='#ededed'>{category}</Typography>
-                    </Box>
-                    <Box p='1em 2em 2em'>
-                        <Typography variant='h6' color='#ededed'>Descripcion:</Typography>
-                        <Typography variant='body1' color='#ededed'>{description}</Typography>
                     </Box>
                 </Box>
             </Box>

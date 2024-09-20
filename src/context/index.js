@@ -7,27 +7,35 @@ const ApiContext = createContext();
 const ApiProvider = ({ children }) => {
   const [apiData, setApiData] = useState(null);
 
-  const createVideo = async (path, method, data) => {
-    const response = await apiRequest(path, method, data);
-    if (response.status !== 200) {
-      // console.log(response);
-    }
-    setApiData(response.data);
+  // const createVideo = async (path, method, data) => {
+  //   const response = await apiRequest(path, method, data);
+  //   if (response.status !== 200) {
+  //     // console.log(response);
+  //   }
+  //   setApiData(response.data);
+  //   return response;
+  // };
+
+  const getMovies = async (path, method) => {
+    const response = await apiRequest(path, method);
+    console.log(response);
     return response;
   };
 
-  const getVideo = async (path, method) => {
+  const getGenres = async (path, method) => {
     const response = await apiRequest(path, method);
-    // console.log(response);
+    console.log(response);
     return response;
   };
+
 
   return (
     <ApiContext.Provider
       value={{
         apiData,
-        createVideo,
-        getVideo,
+        // createVideo,
+        getMovies,
+        getGenres,
       }}
     >
       {children}
